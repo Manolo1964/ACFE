@@ -6,7 +6,7 @@ body {
   background: #d5808d;
   color: #2d3e50;
   font-family: "Trirong", serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.5em;
 }
 .container {
@@ -45,7 +45,7 @@ h2 {
 h3 {
   font-family: "Lora", serif;
   text-shadow: 1px 1px 1px black;
-  font-size: 1.4em;
+  font-size: 1.6em;
   text-align: center;
 }
 .container .header {
