@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #d5808d;
+  color: #2d3e50;
+  font-family: "Trirong", serif;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+}
+.container {
+  min-width: 300px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, auto);
+  justify-content: center;
+  grid-template-areas:
+    "h h h h h h"
+    "c c c c c c"
+    "s s s s s s"
+    "w1 w1 w1 w1 w1 w1"
+    "w2 w2 w2 w2 w2 w2"
+    "f f f f f f";
+}
+p {
+  margin-bottom: 1.8em;
+}
+h1 {
+  font-family: "Quicksand", sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 2px black;
+  font-size: 2em;
+  line-height: 1.3em;
+  text-align: center;
+}
+h2 {
+  font-family: "Lora", serif;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1.8em;
+  text-align: center;
+}
+h3 {
+  font-family: "Lora", serif;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1.4em;
+  text-align: center;
+}
+.container .header {
+  grid-area: h;
+  background: #d33f49;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 1rem 0 1rem;
+}
+.logo-nav img {
+  max-width: 75px;
+  max-height: 75px;
+}
+.logo-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header a {
+  color: #fff;
+  text-decoration: none;
+}
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.w {
+  list-style: none;
+  text-align: center;
+}
+.navigation ul li {
+  display: inline-block;
+}
+.navigation ul li a {
+  display: block;
+  border: #d5808d solid 2px;
+  background: #262730;
+  padding: 0.5rem 1rem;
+  transition: all 0.4s linear;
+  border-radius: 10px;
+}
+.navigation ul li a:hover {
+  background: #d5808d;
+}
+.container .content {
+  grid-area: c;
+  background: hsl(62, 51%, 88%);
+  display: flexbox;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 17em;
+}
+.content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.container .sidebar {
+  width: 100%;
+  grid-area: s;
+  background: #d7c0d0;
+  align-items: flex-start;
+}
+.item {
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.img {
+  max-width: 200px;
+  max-height: 200px;
+}
+.img1 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+  max-height: 400px;
+}
+.container .widget-1,
+.container .widget-2 {
+  background: #77ba99;
+  color: #495159;
+  justify-content: center;
+  padding-top: 2em;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.container .widget-1 {
+  grid-area: w1;
+  padding-bottom: 1em;
+}
+.container .widget-2 {
+  grid-area: w2;
+  padding-bottom: 15em;
+}
+.container .footer {
+  grid-area: f;
+  background: #262730;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: inline;
+  padding: 1rem 5rem 0;
+}
+.footer a {
+  float: right;
+  right: 10%;
+  color: #fff;
+  text-decoration: none;
+  background: #d33f49;
+  border: #d5808d solid 1px;
+  padding: 0 3rem;
+  transition: all 0.4s linear;
+  border-radius: 10px;
+  z-index: 100;
+}
+.footer a:hover {
+  background: #d5808d;
+}
+.button {
+  text-align: right;
+}
+
+@media screen and (min-width: 576px) {
+  .container .content {
+    padding-top: 12em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    padding-top: 9em;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "h h h h h h h h h h h h"
+      "c c c c c c s s s s s s"
+      "w1 w1 w1 w1 w1 w1 w2 w2 w2 w2 w2 w2"
+      "f f f f f f f f f f f f";
+  }
+  .container .content {
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .container .sidebar {
+    padding-top: 1em;
+  }
+  @media screen and (min-width: 998px) {
+    .container {
+      padding-top: 6.5em;
+    }
+  }
+  @media screen and (min-width: 1470px) {
+    .container {
+      grid-template-areas:
+        "h h h h h h h h h h h h"
+        "c c c c c c c c s s s s"
+        "w1 w1 w1 w1 w1 w1 w2 w2 w2 w2 w2 w2"
+        "f f f f f f f f f f f f";
+    }
+    .img1 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1000px;
+      max-height: 1000px;
+    }
+  }
+  @media screen and (min-width: 1800px) {
+  }
+  .img1 {
+    padding-top: 0em;
+  }
+}
