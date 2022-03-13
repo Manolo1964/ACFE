@@ -1,0 +1,162 @@
+body {
+  background-image: url(Images_velo/velo1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  margin: 0;
+  padding: 0;
+  color: #020202;
+  font-family: "Trirong", serif;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+}
+.container {
+  min-width: 300px;
+  margin: 10px auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  grid-template-areas:
+    "h h h h h h"
+    "c c c c c c"
+    "f f f f f f";
+}
+p {
+  margin-bottom: 1.8em;
+}
+h1 {
+  font-family: "Quicksand", sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 2px black;
+  font-size: 2em;
+  line-height: 1.3em;
+  text-align: center;
+}
+h2 {
+  font-family: "Lora", serif;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1.8em;
+  text-align: center;
+}
+.container .header {
+  grid-area: h;
+  background: #d33f49;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 1rem 0 1rem;
+}
+.logo-nav img {
+  max-width: 75px;
+  max-height: 75px;
+  border-radius: 10px;
+  border: solid 2px white;
+}
+.logo-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header a {
+  color: #fff;
+  text-decoration: none;
+}
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navigation ul li {
+  display: inline-block;
+}
+.navigation ul li a {
+  display: block;
+  border: solid 2px white;
+  background: #262730;
+  padding: 10px 1rem;
+  transition: all 0.4s linear;
+  border-radius: 10px;
+}
+.navigation ul li a:hover {
+  background: #d5808d;
+  cursor: pointer;
+}
+.container .content {
+  grid-area: c;
+  text-align: center;
+  min-width: 300px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 20em;
+  padding-bottom: 18em;
+}
+form {
+  width: 500px;
+  margin: auto;
+  background-color: rgba(119, 186, 153, 0.5);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  justify-content: center;
+  align-items: center;
+}
+input, textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 7px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+}
+textarea {
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+}
+#Button_envoyer {
+  background: #d33f49;
+  color: #fff;
+  padding: 20px;
+  border: solid 2px white;
+}
+#Button_envoyer:hover {
+  background: #d5808d;
+  cursor: pointer;
+}
+.container .footer {
+  grid-area: f;
+  background: #262730;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: inline;
+  padding: 1rem 3rem 0;
+}
+.footer a {
+  float: right;
+  right: 10%;
+  color: #fff;
+  text-decoration: none;
+  background: #d33f49;
+  border: solid 2px white;
+  padding: 10px 4rem;
+  transition: all 0.4s linear;
+  border-radius: 10px;
+  z-index: 100;
+}
+.footer a:hover {
+  background: #d5808d;
+}
+.button {
+  text-align: right;
+}
+
