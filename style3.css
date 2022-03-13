@@ -6,8 +6,8 @@ body {
   padding: 0;
   color: #020202;
   font-family: "Trirong", serif;
-  font-size: 1.6rem;
-  line-height: 1.5em;
+  font-size: 0.8rem;
+  line-height: 1.2em;
 }
 .container {
   min-width: 300px;
@@ -23,7 +23,7 @@ body {
     "f f f f f f";
 }
 p {
-  margin-bottom: 1.8em;
+  margin-bottom: 1.5em;
 }
 h1 {
   font-family: "Quicksand", sans-serif;
@@ -159,4 +159,15 @@ textarea {
 .button {
   text-align: right;
 }
-
+@media screen and (min-width: 800px) {
+  body {
+  font-size: 1.2rem;
+  line-height: 1.5em;
+}
+h1 {
+  font-size: 1.6em;
+}  
+h2 {
+  font-size: 1.4em;
+}  
+}
