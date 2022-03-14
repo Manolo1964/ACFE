@@ -1,5 +1,5 @@
 body {
-  background-image: url(Images_velo/velo1.jpg);
+  background: #eff0d1;
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
   margin: 0;
@@ -87,7 +87,6 @@ h2 {
 .container .content {
   grid-area: c;
   text-align: center;
-  min-width: 300px;
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 20em;

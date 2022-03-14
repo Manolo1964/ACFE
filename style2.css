@@ -88,7 +88,6 @@ h2 {
   grid-area: c;
   text-align: center;
   display: flexbox;
-  min-width: 300px;
   padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 15em;
