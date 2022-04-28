@@ -15,12 +15,12 @@ body {
   grid-gap: 10px;
   justify-content: center;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, auto);
+  grid-template-rows: repeat(6, auto);
   grid-template-areas:
     "h h h h h h h h h h h h"
     "c c c c c c c c c c c c"
     "s s s s s s s s s s s s"
-    "w1 w1 w1 w1 w1 w1 w1 w1 w1 w1 w1 w1"    
+    "w1 w1 w1 w1 w1 w1 w1 w1 w1 w1 w1 w1"
     "w2 w2 w2 w2 w2 w2 w2 w2 w2 w2 w2 w2"
     "f f f f f f f f f f f f";
 }
@@ -91,7 +91,7 @@ h3 {
   padding: 10px 1rem;
   transition: all 0.4s linear;
   border-radius: 10px;
-  }
+}
 .navigation ul li a:hover {
   background: #d5808d;
   cursor: pointer;
@@ -162,13 +162,13 @@ h3 {
   grid-area: f;
   background: #262730;
   color: #fff;
-  position: fixed;
+  position: absolute bottom;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0px;
   z-index: 100;
   display: inline;
-  padding: 1rem 3rem 0;
+  padding: 1rem 3rem 1rem;
 }
 .footer a {
   float: right;
@@ -190,11 +190,11 @@ h3 {
 }
 
 @media screen and (min-width: 800px) {
-body {
-  font-size: 1.2rem;
-  line-height: 1.5em;
-}
-.container {
+  body {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+  }
+  .container {
     padding-top: 9.1em;
     grid-template-rows: repeat(4, auto);
     grid-template-columns: repeat(12, 1fr);
@@ -204,70 +204,67 @@ body {
       "w1 w1 w1 w1 w1 w1 w2 w2 w2 w2 w2 w2"
       "f f f f f f f f f f f f";
   }
-.container .content {
+  .container .content {
     padding-top: 0em;
     padding-left: 1em;
     padding-right: 1em;
   }
-.container .sidebar {
+  .container .sidebar {
     padding-top: 2em;
   }
-.img1 {
+  .img1 {
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
     max-height: 1000px;
-    }
-h1 {
-  font-size: 1.6em;
- }
-h2 {
-  font-size: 1.4em;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
 }
-h3 {
-  font-size: 1.2em;
-}
-}
-@media screen and (min-width: 1136px) {
-  .container {
 
-}
 @media screen and (min-width: 1470px) {
-    .container {
-      grid-template-areas:
-        "h h h h h h h h h h h h"
-        "c c c c c c c s s s s s"
-        "w1 w1 w1 w1 w1 w1 w2 w2 w2 w2 w2 w2"
-        "f f f f f f f f f f f f";
-    }
-    .img1 {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1500px;
-      max-height: 1500px;
-    }
+  .container {
+    grid-template-areas:
+      "h h h h h h h h h h h h"
+      "c c c c c c c s s s s s"
+      "w1 w1 w1 w1 w1 w1 w2 w2 w2 w2 w2 w2"
+      "f f f f f f f f f f f f";
+  }
+  .img1 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1500px;
+    max-height: 1500px;
+  }
 }
 @media screen and (min-width: 2000px) {
-    .img1 {
+  .img1 {
     padding-top: 0em;
   }
-    .container {
+  .container {
     grid-template-areas:
       "h h h h h h h h h h h h"
       "c c c c c c c c s s s s"
       "w1 w1 w1 w1 w1 w1 w2 w2 w2 w2 w2 w2"
       "f f f f f f f f f f f f";
-    }
-}    
-@media screen and (min-width: 2200px) {
-    .img1 {
-    padding-top: 0em;
   }
-    .container {
+}
+@media screen and (min-width: 2200px) {
+  .img1 {
+    padding-top: 1em;
+  }
+  .container {
     grid-template-areas:
       "h h h h h h h h h h h h"
       "c c c c c c c c c s s s"
       "w1 w1 w1 w1 w1 w1 w2 w2 w2 w2 w2 w2"
       "f f f f f f f f f f f f";
-    }
+  }
 }
