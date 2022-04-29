@@ -40,7 +40,7 @@
 <p id="O">
 
 <br/><input type="text" name="code" autofocus="" required=""/><br/>
-Email:
+E-mail:
 <br/><input type="text" name="email" autofocus="" required="" placeholder="e-mail"/><br/>
 Téléphone:
 <br/><input type="text" name="telephone" autofocus="" required="" placeholder="Téléphone"/><br/>
