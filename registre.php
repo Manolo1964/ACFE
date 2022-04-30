@@ -8,16 +8,8 @@
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
 </head>
-
 <body>
-
-
-
 <?php
-
-
-
-//Variables
 
 $nom=$_POST['nom']; 
 $password=$_POST['password']; 
@@ -32,12 +24,13 @@ if(!empty($nom) || !empty($password) || !empty($email) || !empty($telephone) || 
 	$dbname = "registreutilisateurs";
 
 	$conn = new mysqli($host,$dbusername,$dbpassword,$dbname);
-	//je vérifie s’il y a une connexion fidèle entre le formulaire et la base de données
+
 if (mysqli_connect_error ()) {
-		//vérifier s’il y a eu une erreur dans la dernière connexion 
+
+
 		die('connect error('.mysqli_connect_errno().')' .mysqli_connect_error());
 }
-//requête préparée
+
 else{
 	$SELECT = "SELECT telephone from utilisateurs where telephone = ? limit 1 ";
 	$INSERT = "INSERT INTO utilisateurs (nom,password,email,telephone,message)values(?,?,?,?,?) ";
@@ -66,17 +59,6 @@ else{
 	echo "Remplissez tous les champs";
 	die();
 }
-
-
-
-
-
-
-
-
-
 ?>
-
-
 </body>
 </html>

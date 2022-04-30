@@ -16,9 +16,9 @@
       href="https://fonts.googleapis.com/css2?family=Lora&family=Quicksand&family=Trirong:ital@1&display=swap"
       rel="stylesheet"/>
     <script
-			  src="https://code.jquery.com/jquery-3.6.0.js"
-			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-			  crossorigin="anonymous"></script>  
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"></script>  
   </head>
   <body>
     <div class="container">
@@ -134,16 +134,5 @@
         <p class="copyright">&#9400 Copyright 2022 - Tous droits réservés</p>
       </footer>
     </div>
-    <?php 
-      echo rand(1.800);
-    ?>
   </body>
 </html>
-<script type="text/javascript">
-  $(document).ready(function(){
-    setInterval(
-      function(){
-        $('#recharger').load('evenements.php')
-    },2000);    
-  });
-</script>
