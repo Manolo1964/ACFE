@@ -34,20 +34,19 @@
         <br />
       </header>
       <main class="content">
-<form name="datos" id="datos" method="post" action="registre.php" >
+<form action="registre.php" method="post"  >
 <br>         
-<h2 id="A">Contact</h2>
-<p id="O">
-
-<br/><input type="text" name="code" autofocus="" required=""/><br/>
-E-mail:
-<br/><input type="text" name="email" autofocus="" required="" placeholder="e-mail"/><br/>
-Téléphone:
-<br/><input type="text" name="telephone" autofocus="" required="" placeholder="Téléphone"/><br/>
+<h2>Contact</h2>
 Nom:
-<br/><input type="text" name="nom" autofocus="" required="" placeholder="Nom"/> <br/>
+<br/><input type="text" name="nom" placeholder="Nom" required/> <br/>
+Password:
+<br/><input type="password" name="password" placeholder="password" required/> <br/>
+E-mail:
+<br/><input type="email" name="email" placeholder="e-mail" required/><br/>
+Téléphone:
+<br/><input type="phone" name="telephone" placeholder="Téléphone" required/><br/>
 Message:
-<br/><textarea type="text" name="message" autofocus="" required="" placeholder="Écrivez ici votre message"></textarea><br/>
+<br/><textarea type="text" name="message" placeholder="Écrivez ici votre message" required></textarea><br/>
 <br/>
 <input type="submit" name="Finir l’enregistrement" value="Finir l’enregistrement" id="Button_envoyer" />
 </form>

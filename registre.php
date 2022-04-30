@@ -8,45 +8,70 @@
 </head>
 
 <body>
-<p id"O">   
+
+
 
 <?php
 
-$code=$_POST['code'];
-$message=$_POST['message'];  
+
+
+//Variables
+
 $nom=$_POST['nom']; 
+$password=$_POST['password']; 
 $email=$_POST['email']; 
 $telephone=$_POST['telephone'];
+$message=$_POST['message'];  
 
+if(!empty($nom) || !empty($password) || !empty($email) || !empty($telephone) || !empty($message)){
+	$host = "localhost";
+	$dbusername = "root";
+	$dbpassword = "";
+	$dbname = "registreutilisateurs";
 
-include("configuration.php");
-
-
-
-//je vérifie si l’utilisateur est déjà enregistré 
-$query="select * from registre_utilisateurs where idUser=".$code;
-
-$result=mysql_query($query) or die("Erreur dans l’instruction SQL");
-
-if (mysql_num_rows($result) > 0) {
-	echo"<br/><br/>";
-	echo "L’Utilisateur est déjà enregistré </br>";
-	echo "<a href=../contact.php>Retourner</a>";
-
-} else if (mysql_num_rows($result) == 0) {
-//nous enregistrons l’utilisateur dans l’association
-  
-$query="insert into registre_utilisateurs(idUser,email,telephone,nom,message)
-	values($code,'$email','$telephone','$nom','$message')";
-	$result=mysql_query($query) or die("Erreur d’exécution de l’instruction SQL ".mysql_error());
-	
-	echo"<br/><br/>";
-	echo "<br/>";
-    echo "<a href=../contact.php>Retourner</a>";
-	mysql_close();          
-        
-
+	$conn = new mysqli($host,$dbusername,$dbpassword,$dbname);
+	//je vérifie s’il y a une connexion fidèle entre le formulaire et la base de données
+if (mysqli_connect_error ()) {
+		//vérifier s’il y a eu une erreur dans la dernière connexion 
+		die('connect error('.mysqli_connect_errno().')' .mysqli_connect_error());
 }
+//requête préparée
+else{
+	$SELECT = "SELECT telephone from utilisateurs where telephone = ? limit 1 ";
+	$INSERT = "INSERT INTO utilisateurs (nom,password,email,telephone,message)values(?,?,?,?,?) ";
+
+	$stmt = $conn->prepare($SELECT);
+	$stmt ->bind_param( "i", $telephone);
+	$stmt ->execute();
+	$stmt ->bind_result($telephone);
+	$stmt ->store_result();
+	$rnum = $stmt->num_rows;
+if ($rnum == 0){
+		$stmt ->close();
+		$stmt = $conn->prepare($INSERT);
+		$stmt ->bind_param( "sssis", $nom,$password,$email,$telephone,$message);
+		$stmt ->execute();
+		echo "INSCRIPTION TERMINÉE.";
+	}
+else{
+		echo "Ce numéro de téléphone a déjà été enregistré";
+	}
+	$stmt ->close();
+	$conn ->close();
+	}
+}
+else{
+	echo "Remplissez tous les champs";
+	die();
+}
+
+
+
+
+
+
+
+
 
 ?>
  <!-- javascript -->
