@@ -49,7 +49,7 @@ if ($rnum == 0){
 		echo "INSCRIPTION TERMINÉE.";
 	}
 else{
-		echo "Ce numéro de téléphone a déjà été enregistré";
+		echo "Ce numéro de téléphone a déjà été enregistré.";
 	}
 	$stmt ->close();
 	$conn ->close();
